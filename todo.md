@@ -8,8 +8,8 @@ This project is organized using a **Feature-Driven** workflow and **Conventional
 Set up base HTML skeleton and design tokens (fonts, colors, reset).
 
 - [x] Configure "Josefin Sans" font and palette colors from `style-guide.md` in Tailwind theme.
-- [ ] Build complete semantic HTML structure (`<header>`, `<main>`, `<form>`, `<input>`, `<ul>` todo list container, filter panel, `<footer>`).
-- [ ] Ensure mobile & desktop responsive containers are set up.
+- [x] Build complete semantic HTML structure (`<header>`, `<main>`, `<form>`, `<input>`, `<ul>` todo list container, filter panel, `<footer>`).
+- [x] Ensure mobile & desktop responsive containers are set up.
 
 ### Git Commands:
 ```bash

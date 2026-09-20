@@ -33,33 +33,33 @@
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,700;1,700&display=swap"
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@0;1&display=swap" rel="stylesheet">
-  rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
+  <script src="script.js"></script>
   <title>Frontend Mentor | Todo app</title>
-  </style>
 </head>
 
 <body>
   <header>
     <nav>
-      <h1>Todo</h1>
+      <h1 class="text-2xl">Todo</h1>
       <button id="color">
-        <ion-icon name="moon-outline"></ion-icon>
+        <img id="light" src="images/icon-sun.svg" alt="">
+        <img id="dark" src="images/icon-moon.svg" alt="">
       </button>
     </nav>
   </header>
   <main>
     <form action="">
-      <input type="checkbox">Create a new todo..</input>
+      <input type="text" placeholder="Create a new todo..">
     </form>
-    <ul>
-      <li></li>
-    </ul>
+    <section id="tasks">
+      <ul>
+        <li></li>
+      </ul>
 
-    <span id="items__left"></span> items left
-    Clear Completed
-
+      <span id="items__left"></span> items left
+      <button>Clear Completed</button>
+    </section>
 
     <div>
       <button id="all">All</button>
