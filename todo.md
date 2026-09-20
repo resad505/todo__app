@@ -25,8 +25,8 @@ Header section, theme toggle button, and visual theme transition logic.
 
 - [x] Complete header layout (title and theme toggle button).
 - [x] Configure theme-specific background images (`bg-desktop-dark`, `bg-desktop-light`, etc.).
-- [ ] Implement JavaScript theme toggle logic (`class` or `data-theme` switch).
-- [ ] Persist user theme preference in `localStorage`.
+- [x] Implement JavaScript theme toggle logic (`class` or `data-theme` switch).
+- [x] Persist user theme preference in `localStorage`.
 
 ### Git Commands:
 ```bash
