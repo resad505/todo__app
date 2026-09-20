@@ -5,7 +5,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,700;1,700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="script.js" defer></script>
+  <title>Frontend Mentor | Todo app</title>
+
   <style type="text/tailwindcss">
+    @custom-variant dark (&:where(.dark, .dark *));
     @theme {
         --font-sans-700: "Josefin Sans", sans-serif;
         --font-sans-400:"Josefin Sans", sans-serif;
@@ -24,27 +35,23 @@
         --color-gray-300: hsl(233, 11%, 84%);
         --color-gray-600: hsl(236, 9%, 61%);
         --color-navy-850: hsl(235, 19%, 35%);
-
+        /* background colors*/
+        --background-image-desktop-dark: url('./images/bg-desktop-dark.jpg');
+        --background-image-desktop-light: url('./images/bg-desktop-light.jpg');
+        --background-image-mobile-dark: url('./images/bg-mobile-dark.jpg');
+        --background-image-mobile-light: url('./images/bg-mobile-light.jpg');
       }
     </style>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,700;1,700&display=swap"
-    rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <script src="script.js"></script>
-  <title>Frontend Mentor | Todo app</title>
 </head>
 
-<body>
+<body
+  class="bg-mobile-light bg-gray-50 dark:bg-navy-950 dark:bg-mobile-dark md:bg-desktop-light dark:md:bg-desktop-dark bg-cover bg-no-repeat bg-top">
   <header>
-    <nav>
-      <h1 class="text-2xl">Todo</h1>
+    <nav class="flex flex-row items-center justify-between py-6 px-4">
+      <h1 class="text-3xl font-sans-700 text-white tracking-[10px]">TODO</h1>
       <button id="color">
-        <img id="light" src="images/icon-sun.svg" alt="">
-        <img id="dark" src="images/icon-moon.svg" alt="">
+        <img id="light" class="hidden dark:block" src="images/icon-sun.svg" alt="">
+        <img id="dark" class="block dark:hidden" src="images/icon-moon.svg" alt="">
       </button>
     </nav>
   </header>

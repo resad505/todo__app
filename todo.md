@@ -23,8 +23,8 @@ git push
 ## 2. Feature: Theme Switcher (Dark / Light Mode)
 Header section, theme toggle button, and visual theme transition logic.
 
-- [ ] Complete header layout (title and theme toggle button).
-- [ ] Configure theme-specific background images (`bg-desktop-dark`, `bg-desktop-light`, etc.).
+- [x] Complete header layout (title and theme toggle button).
+- [x] Configure theme-specific background images (`bg-desktop-dark`, `bg-desktop-light`, etc.).
 - [ ] Implement JavaScript theme toggle logic (`class` or `data-theme` switch).
 - [ ] Persist user theme preference in `localStorage`.
 
