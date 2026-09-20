@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+        --font-sans-700: "Josefin Sans", sans-serif;
+        --font-sans-400:"Josefin Sans", sans-serif;
+        /* dark colors*/
+        --color-navy-950: hsl(235, 21%, 11%);
+        --color-navy-900: hsl(235, 24%, 19%);
+        --color-purple-300: hsl(234, 39%, 85%);
+        --color-purple-100: hsl(236, 33%, 92%);
+        --color-purple-600: hsl(235, 16%, 43%);
+        --color-purple-700: hsl(233, 14%, 35%);
+        --color-purple-800: hsl(237, 14%, 26%);
+        --color-gray-600: hsl(236, 9%, 61%);
+        /* light colors */
+        --color-gray-50: hsl(0, 0%, 98%);
+        --color-purple-300: hsl(234, 39%, 85%);
+        --color-gray-300: hsl(233, 11%, 84%);
+        --color-gray-600: hsl(236, 9%, 61%);
+        --color-navy-850: hsl(235, 19%, 35%);
+
+      }
+    </style>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,700;1,700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@0;1&display=swap" rel="stylesheet">
+  rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Todo app</title>
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <h1>Todo</h1>
+      <button id="color">
+        <ion-icon name="moon-outline"></ion-icon>
+      </button>
+    </nav>
+  </header>
+  <main>
+    <form action="">
+      <input type="checkbox">Create a new todo..</input>
+    </form>
+    <ul>
+      <li></li>
+    </ul>
+
+    <span id="items__left"></span> items left
+    Clear Completed
+
+
+    <div>
+      <button id="all">All</button>
+      <button id="active">Active</button>
+      <button id="completed">Completed</button>
+    </div>
+  </main>
+  <footer>
+    <h2>Drag and drop to reorder list</h2>
+    <p>
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.</p>
+    <p>Coded by <a href="#">Your Name Here</a>.</p>
+  </footer>
+</body>
+
+</html>
