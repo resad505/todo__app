@@ -56,40 +56,44 @@
     </nav>
   </header>
   <main class="-mt-24 md:-mt-32 relative z-10">
-    <div class="">
-      <span class="w-6 h-6 rounded-full border border-gray"></span>
-      <form action="" class="w-9/10 flex justify-center items-center m-auto">
-        <input
-          class=" m-auto dark:bg-navy-900 outline-none w-full bg-white dark:text-purple-300 text-purple-850 m-auto mt-10 py-2 px-4 rounded-md"
-          type="text" placeholder="Create a new todo..">
-      </form>
-      <section class="dark:bg-navy-900 bg-white dark:text-purple-300 text-purple-850  w-9/10 m-auto mt-10 rounded-md"
-        id="tasks">
-        <ul class="flex flex-col justify-center">
-          <li
-            class="w-full  flex-row flex justify-between items-center mt-4 px-6 py-2 rounded-md  border-b border-gray-200">
-            <div class="flex items-center gap-4">
-              <button class="w-6 h-6 rounded-full border border-gray"></button><span class="flex items-start">master
-                js</span>
-            </div>
-            <img class="cursor-pointer w-4 h-4" src="images/icon-cross.svg" alt="">
-          </li>
-        </ul>
-        <section id="status" class="flex justify-between mt-4 py-2 px-4 text-gray-600">
-          <div>
-            <span id="items__left"></span>
-            <p>items left</p>
-          </div>
-          <button>Clear Completed</button>
-        </section>
-      </section>
+    <form action="" class="w-9/10 flex justify-center items-center m-auto">
+      <input
+        class=" m-auto dark:bg-navy-900 outline-none w-full bg-white dark:text-purple-300 text-purple-850 m-auto mt-10 py-2 px-4 rounded-md"
+        type="text" placeholder="Create a new todo..">
+    </form>
+    <section class="dark:bg-navy-900 bg-white dark:text-purple-300 text-purple-850  w-9/10 m-auto mt-10 rounded-md"
+      id="tasks">
+      <ul class="flex flex-col justify-center">
 
-      <div>
-        <button id="all">All</button>
-        <button id="active">Active</button>
-        <button id="completed">Completed</button>
+      </ul>
+      <section id="status" class="flex justify-between mt-4 py-2 px-4 text-gray-600">
+        <div>
+          <p><span id="items__left">0</span> items left</p>
+        </div>
+        <button>Clear Completed</button>
+      </section>
+    </section>
+    <!-- ---
+
+## 4. Feature: Toggle Completion & Delete Items
+Mark todos as complete or remove them from the list.
+
+- [ ] Style todo item rows (`<li>`) (strike-through text, gradient check icon, hover cross button).
+- [ ] Toggle `completed` status (`true` / `false`) on item click.
+- [ ] Delete item on cross ('X') button click (`filter` by id).
+- [ ] Dynamically update the active items counter ("X items left").
+
+--- -->
+    <section
+      class="flex justify-center gap-4 mt-4 px-6 py-4 bg-white dark:bg-navy-900 w-9/10 m-auto rounded-md items-center">
+      <div class="flex gap-4 justify-center text-gray-600
+         dark:text-purple-600 cursor-pointer font-sans-700">
+        <button id="all" class="hover:text-navy-850 dark:hover:text-purple-100">All</button>
+        <button id="activeTasks" class="hover:text-navy-850 dark:hover:text-purple-100">Active</button>
+        <button id="completedTasks" class="hover:text-navy-850 dark:hover:text-purple-100">Completed</button>
       </div>
-    </div>
+    </section>
+
   </main>
   <footer>
     <h2>Drag and drop to reorder list</h2>
