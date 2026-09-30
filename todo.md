@@ -37,10 +37,10 @@ Allow users to type a new task and add it to the list.
 ## 4. Feature: Toggle Completion & Delete Items
 Mark todos as complete or remove them from the list.
 
-- [ ] Style todo item rows (`<li>`) (strike-through text, gradient check icon, hover cross button).
-- [ ] Toggle `completed` status (`true` / `false`) on item click.
-- [ ] Delete item on cross ('X') button click (`filter` by id).
-- [ ] Dynamically update the active items counter ("X items left").
+- [x] Style todo item rows (`<li>`) (strike-through text, gradient check icon, hover cross button).
+- [x] Toggle `completed` status (`true` / `false`) on item click.
+- [x] Delete item on cross ('X') button click (`filter` by id).
+- [x] Dynamically update the active items counter ("X items left").
 
 ---
 
