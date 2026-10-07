@@ -61,27 +61,28 @@
         class=" m-auto dark:bg-navy-900 outline-none w-full bg-white dark:text-purple-300 text-navy-850 m-auto mt-10 py-2 px-4 rounded-md"
         type="text" placeholder="Create a new todo.." aria-label="Create a new todo">
     </form>
-    <section class="dark:bg-navy-900 bg-white dark:text-purple-300 text-purple-800  w-9/10 m-auto mt-10 rounded-md"
+    <section
+      class="dark:bg-navy-900 bg-white dark:text-purple-300 text-purple-800  w-9/10 m-auto mt-10 rounded-md mb-24 md:mb-0"
       id="tasks">
       <ul class="flex flex-col justify-center">
 
       </ul>
-      <section id="status" class="flex justify-between mt-4 py-2 px-4 text-gray-600">
+      <section id="status" class="flex justify-between mt-4 py-2 px-4 text-gray-600 relative items-center">
         <div>
           <p><span id="items__left">0</span><span id="items__text"> items left</span></p>
         </div>
+        <div
+          class="absolute top-full left-0 w-full mt-4 flex gap-4 justify-center py-4 px-6 bg-white dark:bg-navy-900 rounded-md shadow-md md:static md:w-auto md:p-0 md:mt-0 md:bg-transparent md:dark:bg-transparent md:shadow-none font-sans-700 text-gray-600 dark:text-purple-600 cursor-pointer">
+          <button id="all" class="hover:text-blue-500">All</button>
+          <button id="activeTasks" class="hover:text-blue-500">Active</button>
+          <button id="completedTasks" class="hover:text-blue-500">Completed</button>
+        </div>
+
         <button id="clearCompletedBtn">Clear Completed</button>
       </section>
+
     </section>
-    <section
-      class="flex justify-center gap-4 mt-4 px-6 py-4 bg-white dark:bg-navy-900 w-9/10 m-auto rounded-md items-center">
-      <div class="flex gap-4 justify-center text-gray-600
-         dark:text-purple-600 cursor-pointer font-sans-700">
-        <button id="all" class="hover:text-blue-500">All</button>
-        <button id="activeTasks" class="hover:text-blue-500">Active</button>
-        <button id="completedTasks" class="hover:text-blue-500">Completed</button>
-      </div>
-    </section>
+
 
   </main>
   <footer>
