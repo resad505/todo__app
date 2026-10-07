@@ -57,13 +57,13 @@ Filter todos by active/completed status and clear completed items in batch.
 ## 6. Feature: Local Storage Persistence
 Persist todo items across browser reloads.
 
-- [ ] Sync the `todos` array with `localStorage` on any state update (`add`, `toggle`, `delete`, `clear`).
-- [ ] Load and render saved todos on initial page load.
+- [x] Sync the `todos` array with `localStorage` on any state update (`add`, `toggle`, `delete`, `clear`).
+- [x] Load and render saved todos on initial page load.
 
 ---
 
 ## 7. Feature (Bonus): Drag & Drop and Accessibility
 Enhanced user experience and keyboard support.
 
-- [ ] Implement drag and drop reordering with the HTML5 Drag and Drop API.
-- [ ] Add accessible keyboard navigation (Tab order, focus rings, ARIA labels).
+- [x] Implement drag and drop reordering with the HTML5 Drag and Drop API.
+- [x] Add accessible keyboard navigation (Tab order, focus rings, ARIA labels).

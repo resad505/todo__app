@@ -47,7 +47,7 @@
 <body class=" bg-gray-50 dark:bg-navy-950 min-h-screen bg-mobile-light dark:bg-mobile-dark md:bg-desktop-light
   dark:md:bg-desktop-dark bg-no-repeat bg-top bg-[length:100%_200px] md:bg-[length:100%_300px]">
   <header class="h-52 md:h-72 bg-mobile-light dark:bg-mobile-dark  md:bg-desktop-light dark:md:bg-desktop-dark">
-    <nav class=" flex flex-row items-center justify-between py-6 px-4">
+    <nav class=" flex flex-row items-center justify-between py-6 px-4 w-9/10 max-w-xl mx-auto">
       <h1 class="text-3xl font-sans-700 text-white tracking-[10px]">TODO</h1>
       <button id="color" aria-label="Toggle color theme">
         <img id="light" class="hidden dark:block" src="images/icon-sun.svg" alt="">
@@ -55,8 +55,8 @@
       </button>
     </nav>
   </header>
-  <main class="-mt-24 md:-mt-32 relative z-10">
-    <form action="" class="w-9/10 flex justify-center items-center m-auto">
+  <main class="-mt-24 md:-mt-32 relative z-10 max-w-xl mx-auto">
+    <form action="" class="w-9/10  flex justify-center items-center m-auto">
       <input
         class=" m-auto dark:bg-navy-900 outline-none w-full bg-white dark:text-purple-300 text-navy-850 m-auto mt-10 py-2 px-4 rounded-md"
         type="text" placeholder="Create a new todo.." aria-label="Create a new todo">
@@ -73,17 +73,6 @@
         <button id="clearCompletedBtn">Clear Completed</button>
       </section>
     </section>
-    <!-- ---
-
-## 4. Feature: Toggle Completion & Delete Items
-Mark todos as complete or remove them from the list.
-
-- [ ] Style todo item rows (`<li>`) (strike-through text, gradient check icon, hover cross button).
-- [ ] Toggle `completed` status (`true` / `false`) on item click.
-- [ ] Delete item on cross ('X') button click (`filter` by id).
-- [ ] Dynamically update the active items counter ("X items left").
-
---- -->
     <section
       class="flex justify-center gap-4 mt-4 px-6 py-4 bg-white dark:bg-navy-900 w-9/10 m-auto rounded-md items-center">
       <div class="flex gap-4 justify-center text-gray-600
@@ -96,11 +85,29 @@ Mark todos as complete or remove them from the list.
 
   </main>
   <footer>
-    <h2>Drag and drop to reorder list</h2>
-    <p>
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.</p>
-    <p>Coded by <a href="#">Your Name Here</a>.</p>
+    <p class="text-center text-sm text-gray-500 dark:text-purple-600 mt-10">Drag and drop to reorder list</p>
+    <p class="text-center text-xs text-gray-400 dark:text-purple-700 mt-4">
+      Challenge by <a class="underline" href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a class="underline" href="https://www.frontendmentor.io/profile/resad505">Reshad Mammadov</a>.
+    </p>
+
   </footer>
+  <template id="todo-template">
+    <li draggable="true"
+      class="w-full flex justify-between items-center cursor-grab px-6 py-4 border-b border-gray-200 dark:border-purple-800 group">
+      <div class="flex items-center gap-4">
+        <button
+          class="w-6 h-6 rounded-full border border-gray-300 dark:border-purple-800 flex items-center justify-center"
+          data-action="toggle" role="checkbox"></button>
+        <span class="todo-text"></span>
+      </div>
+      <button class="cursor-pointer opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity"
+        data-action="delete" aria-label="Delete todo">
+        <img alt="" class="w-4 h-4" src="images/icon-cross.svg">
+      </button>
+    </li>
+  </template>
+
 </body>
 
 </html>
