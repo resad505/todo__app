@@ -47,10 +47,10 @@ Mark todos as complete or remove them from the list.
 ## 5. Feature: Filtering & Clear Completed
 Filter todos by active/completed status and clear completed items in batch.
 
-- [ ] Implement filters for "All", "Active", and "Completed".
-- [ ] Highlight the active filter button state.
-- [ ] Implement "Clear Completed" button action.
-- [ ] Adapt layout for mobile & desktop (separate mobile filter card).
+- [x] Implement filters for "All", "Active", and "Completed".
+- [x] Highlight the active filter button state.
+- [x] Implement "Clear Completed" button action.
+- [x] Adapt layout for mobile & desktop (separate mobile filter card).
 
 ---
 

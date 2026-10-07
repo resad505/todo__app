@@ -7,6 +7,7 @@ const ul = document.querySelector("ul")
 const allFilter = document.querySelector("#all")
 const activeFilter = document.querySelector("#activeTasks")
 const completedFilter = document.querySelector("#completedTasks")
+const clearCompletedBtn = document.querySelector("#clearCompletedBtn")
 let savedTheme = localStorage.getItem("theme")
 let currentFilter = "all"
 let todos = []
@@ -117,8 +118,8 @@ function updateItems() {
     itemsLeft.textContent = count + " "
     itemsText.textContent = count === 1 ? "item left" : "items left"
 }
-clearComplatedBtn = document.querySelector("#clearCompletedBtn")
-clearComplatedBtn.addEventListener("click", (e) => {
+
+clearCompletedBtn.addEventListener("click", (e) => {
     todos = todos.filter((item) => item.completed === false)
     renderTodos()
 
