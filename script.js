@@ -145,7 +145,7 @@ function updateActiveFilter() {
     }
 }
 function updateItems() {
-    let count = todos.filter((item) => item.completed === false).length
+    const count = todos.filter((item) => item.completed === false).length
     itemsLeft.textContent = count
     itemsText.textContent = count === 1 ? " item left" : " items left"
 }
