@@ -10,7 +10,7 @@ const clearCompletedBtn = document.querySelector("#clearCompletedBtn")
 const itemsText = document.querySelector("#items__text")
 const itemsLeft = document.querySelector("#items__left")
 const todoTemplate = document.querySelector("#todo-template")
-let savedTheme = localStorage.getItem("theme")
+const savedTheme = localStorage.getItem("theme")
 let currentFilter = "all"
 let todos = []
 let draggedId = null
@@ -62,7 +62,6 @@ function renderTodos() {
         const checkBtn = clone.querySelector('[data-action="toggle"]')
         checkBtn.ariaLabel = todo.completed ? "Mark as incomplete" : "Mark as complete"
         const span = clone.querySelector(".todo-text")
-        checkBtn.ariaChecked = todo.completed ? "true" : "false"
         span.textContent = todo.text
         if (todo.completed) {
             checkBtn.innerHTML = `<img class="w-2.5" src="images/icon-check.svg"></img>`
@@ -153,7 +152,7 @@ function updateItems() {
 function saveTodos() {
     localStorage.setItem("todos", JSON.stringify(todos))
 }
-clearCompletedBtn.addEventListener("click", (e) => {
+clearCompletedBtn.addEventListener("click", () => {
     todos = todos.filter((item) => item.completed === false)
     saveTodos()
     renderTodos()
