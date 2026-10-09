@@ -1,0 +1,24 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --font-sans: "Josefin Sans", sans-serif;
+    /* dark colors*/
+    --color-navy-950: hsl(235, 21%, 11%);
+    --color-navy-900: hsl(235, 24%, 19%);
+    --color-purple-300: hsl(234, 39%, 85%);
+    --color-purple-100: hsl(236, 33%, 92%);
+    --color-purple-600: hsl(235, 16%, 43%);
+    --color-purple-700: hsl(233, 14%, 35%);
+    --color-purple-800: hsl(237, 14%, 26%);
+    /* light colors */
+    --color-gray-50: hsl(0, 0%, 98%);
+    --color-gray-300: hsl(233, 11%, 84%);
+    --color-gray-600: hsl(236, 9%, 61%);
+    --color-navy-850: hsl(235, 19%, 35%);
+    /* background colors*/
+    --background-image-desktop-dark: url('./images/bg-desktop-dark.jpg');
+    --background-image-desktop-light: url('./images/bg-desktop-light.jpg');
+    --background-image-mobile-dark: url('./images/bg-mobile-dark.jpg');
+    --background-image-mobile-light: url('./images/bg-mobile-light.jpg');
+}

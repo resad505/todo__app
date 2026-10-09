@@ -61,10 +61,13 @@ function renderTodos() {
         li.dataset.id = todo.id
         const checkBtn = clone.querySelector('[data-action="toggle"]')
         checkBtn.ariaLabel = todo.completed ? "Mark as incomplete" : "Mark as complete"
+        checkBtn.ariaPressed = String(todo.completed)
+        const deleteBtn = clone.querySelector('[data-action="delete"]')
+        deleteBtn.ariaLabel = `Delete ${todo.text}`
         const span = clone.querySelector(".todo-text")
         span.textContent = todo.text
         if (todo.completed) {
-            checkBtn.innerHTML = `<img class="w-2.5" src="images/icon-check.svg"></img>`
+            checkBtn.innerHTML = `<img class="w-2.5" alt="" src="images/icon-check.svg"></img>`
             checkBtn.classList.add("bg-gradient-to-br", "from-purple-500", "to-blue-500")
             span.classList.add("line-through", "text-gray-300", "dark:text-purple-600")
         }
@@ -116,6 +119,8 @@ ul.addEventListener("click", (e) => {
         }
         saveTodos()
         renderTodos()
+        const updatedToggleBtn = ul.querySelector(`li[data-id="${id}"] [data-action="toggle"]`)
+        updatedToggleBtn?.focus()
     }
     if (actionBtn.dataset.action === "delete") {
         const nextLi = li.nextElementSibling || li.previousElementSibling
@@ -132,17 +137,17 @@ ul.addEventListener("click", (e) => {
         }
     }
 })
+const filterButtons = [
+    { btn: allFilter, value: "all" },
+    { btn: activeFilter, value: "active" },
+    { btn: completedFilter, value: "completed" }
+]
 function updateActiveFilter() {
-    activeFilter.classList.remove("text-blue-500")
-    allFilter.classList.remove("text-blue-500")
-    completedFilter.classList.remove("text-blue-500")
-    if (currentFilter === "all") {
-        allFilter.classList.add("text-blue-500")
-    } else if (currentFilter === "active") {
-        activeFilter.classList.add("text-blue-500")
-    } else if (currentFilter === "completed") {
-        completedFilter.classList.add("text-blue-500")
-    }
+    filterButtons.forEach(({ btn, value }) => {
+        const isActive = value === currentFilter
+        btn.classList.toggle("text-blue-500", isActive)
+        btn.ariaPressed = String(isActive)
+    })
 }
 function updateItems() {
     const count = todos.filter((item) => item.completed === false).length
