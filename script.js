@@ -137,6 +137,34 @@ ul.addEventListener("click", (e) => {
         }
     }
 })
+ul.addEventListener("keydown", (e) => {
+    if (!e.altKey || (e.key !== "ArrowUp" && e.key !== "ArrowDown")) { return }
+    e.preventDefault()
+    const li = e.target.closest("li")
+    if (!li) return
+    const id = Number(li.dataset.id)
+    const fromIndex = todos.findIndex(item => item.id === id)
+    let toIndex
+    if (e.key === "ArrowUp") {
+        if (fromIndex <= 0) return // ən başdadırsa yuxarı gedə bilməz
+        toIndex = fromIndex - 1
+    } else if (e.key === "ArrowDown") {
+        if (fromIndex >= todos.length - 1) return // ən sondadırsa aşağı gedə bilməz
+        toIndex = fromIndex + 1
+    }
+    const [movedItem] = todos.splice(fromIndex, 1)
+    todos.splice(toIndex, 0, movedItem)
+    saveTodos()
+    renderTodos()
+    const action = e.target.dataset.action
+    const targetBtn = action
+        ? ul.querySelector(`li[data-id="${id}"] [data-action="${action}"]`)
+        : ul.querySelector(`li[data-id="${id}"] [data-action="toggle"]`)
+    targetBtn?.focus()
+
+
+
+})
 const filterButtons = [
     { btn: allFilter, value: "all" },
     { btn: activeFilter, value: "active" },
