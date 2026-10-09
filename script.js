@@ -54,7 +54,6 @@ function renderTodos() {
     if (currentFilter === "completed") {
         filteredTodos = todos.filter(todo => todo.completed)
     }
-
     filteredTodos.forEach(todo => {
         const clone = todoTemplate.content.cloneNode(true)
         const li = clone.querySelector("li")
@@ -96,7 +95,6 @@ ul.addEventListener("drop", (e) => {
     if (!targetLi) return
     const targetId = Number(targetLi.dataset.id)
     if (draggedId === targetId) return
-
     const fromIndex = todos.findIndex(item => item.id === draggedId)
     const toIndex = todos.findIndex(item => item.id === targetId)
     if (fromIndex !== -1 && toIndex !== -1) {
@@ -105,7 +103,6 @@ ul.addEventListener("drop", (e) => {
         saveTodos()
         renderTodos()
     }
-
 })
 ul.addEventListener("click", (e) => {
     const actionBtn = e.target.closest("[data-action]")
@@ -146,10 +143,10 @@ ul.addEventListener("keydown", (e) => {
     const fromIndex = todos.findIndex(item => item.id === id)
     let toIndex
     if (e.key === "ArrowUp") {
-        if (fromIndex <= 0) return // ən başdadırsa yuxarı gedə bilməz
+        if (fromIndex <= 0) return
         toIndex = fromIndex - 1
     } else if (e.key === "ArrowDown") {
-        if (fromIndex >= todos.length - 1) return // ən sondadırsa aşağı gedə bilməz
+        if (fromIndex >= todos.length - 1) return
         toIndex = fromIndex + 1
     }
     const [movedItem] = todos.splice(fromIndex, 1)
@@ -161,9 +158,6 @@ ul.addEventListener("keydown", (e) => {
         ? ul.querySelector(`li[data-id="${id}"] [data-action="${action}"]`)
         : ul.querySelector(`li[data-id="${id}"] [data-action="toggle"]`)
     targetBtn?.focus()
-
-
-
 })
 const filterButtons = [
     { btn: allFilter, value: "all" },
